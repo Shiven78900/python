@@ -33,4 +33,94 @@
   - Screen recording permissions for Python and QuickTime Player
 
 ### Install Python Packages
+pip3 install pyautogui pandas
+
+### Grant Accessibility Permissions
+
+1. Open **System Preferences** > **Security & Privacy** > **Privacy** tab.
+2. Select **Accessibility** and **Screen Recording**.
+3. Add your Terminal or Python IDE to both lists.
+
+---
+
+## Code Structure
+.
+├── main_script.py # Main automation script (rename as needed)
+├── tinpr.csv # Mouse setup timing for automation
+├── renp.csv # Mouse positions for recording
+├── menp.csv # Mouse positions for Zoom joining
+├── eenp.csv # Mouse positions for ending recording
+├── dctimings.csv # Default schedule: start/end recording, number of meetings
+├── dtimings.csv # Default meeting schedule: time, meeting ID, password
+├── itimings.csv # Custom (input) meeting schedule
+├── dqtimings.csv # QuickTime recording start time (default)
+├── dptimings.csv # QuickTime recording end time (default)
+├── dktimings.csv # QuickTime start/end times (custom)
+├── datimings.csv # Join-only meeting schedule
+└── (other CSVs as generated)
+
+---
+
+## How to Use
+
+### 1. Clone the Repository
+git clone https://github.com/Shiven78900/python.git
+cd python
+
+### 2. Prepare Your System
+
+- Ensure Zoom and QuickTime Player are installed in their default locations.
+- Install required Python packages (see above).
+- Grant accessibility and screen recording permissions to your Terminal or IDE.
+
+### 3. Run the Script
+
+python3 main_script.py
+*(Replace `main_script.py` with the actual filename.)*
+
+### 4. Follow the Interactive Menu
+
+You'll see a menu like:
+
+THE SCHEDULER: Zoom and Quick Time Player Automation Bot
+
+1.Delete the previous mouse inputs and/or add another
+
+2.Delete the previous Default Inputs and input new default Time, Meeting ID and Password
+
+3.Record zoom meeting and join the meeting automatically according to the default Time, Meeting ID and Password
+
+4.Record and join the zoom meeting according to your input
+
+5.Start screen Recording
+
+6.End Screen Recording
+
+7.Start and End Screen Recording
+
+8.Join Meeting
+
+9.ENTER ANOTHER OPTION
+
+10.Exit
+
+- Enter the number for your desired action.
+- Follow prompts to set up mouse positions, schedules, meeting IDs, and passwords.
+- The script will automate mouse/keyboard actions at the scheduled times.
+
+### 5. CSV Files
+
+- **Do not delete the CSV files** unless you want to reset your configuration.
+- Each CSV stores either timings, meeting details, or mouse positions for automation.
+
+---
+
+## Brief Description
+
+THE SCHEDULER is a robust, menu-driven Python automation tool for macOS that eliminates the hassle of manually starting/stopping recordings and joining Zoom meetings. By combining time scheduling, mouse/keyboard automation, and CSV-based configuration, it ensures you never miss a meeting or recording—ideal for remote workers, students, and teachers.
+
+*For questions, improvements, or issues, please open an issue or pull request on the repository.*
+
+---
+
 
